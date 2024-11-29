@@ -64,7 +64,7 @@ if(isset($_GET['search'])){
             </tr>
             <?php   
             foreach($arr_search ?? $arr_sinh_vien as $id=>$row){
-
+                if(is_array($row)){
                 ?>
                     <tr>
                         <td><?=$id?></td>
@@ -78,6 +78,7 @@ if(isset($_GET['search'])){
                         <td><a href="?action=delete&id=<?=$id?>">Xóa</a></td>
                     </tr>
                 <?php
+                }
             }
             ?>
         </table>
