@@ -33,7 +33,9 @@ if(isset($_POST['action'])){
             'address' => $address, 
             'image' => $image
         ];
-        $id_new = count($_SESSION['arr_sinh_vien']);//Đếm xem có bao nhiêu phần tử, lấy số này làm id_new luôn
+        if(isset($_SESSION['arr_sinh_vien']))
+            $id_new = count($_SESSION['arr_sinh_vien']);//Đếm xem có bao nhiêu phần tử, lấy số này làm id_new luôn
+        else $id_new = 0;
         $_SESSION['arr_sinh_vien'][$id_new] = $sv_new;
         // array_push($sv, $sv_new);//Cách 1 để thêm phần tử mới vào cuối mảng 2 chiều
         // $sv[] = $sv_new;// Cách 2 để thêm phần tử mới vào cuối mảng 2 chiều
