@@ -13,7 +13,7 @@ if(isset($_POST['action'])){
         $email = htmlspecialchars($_POST['email']);
         $phone = htmlspecialchars($_POST['phone']);
         $address = htmlspecialchars($_POST['address']);
-        $image = 'no-avatar.jpg';
+        $image = $sinh_vien_sua['image'];
         //Xử lý upload
         $file = $_FILES['image'];
         // echo '<pre>';
